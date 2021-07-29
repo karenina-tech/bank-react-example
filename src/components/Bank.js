@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function Bank() {
-  const [item, setItem] = useState({ title: '', amount: 0 });
+  const [item, setItem] = useState({ title: '', amount: null });
   const [list, setList] = useState([]);
 
   const handleInputChange = ({ target }) => {
@@ -19,9 +19,23 @@ export default function Bank() {
     setList((state) => [...state, { ...item }]);
   };
 
+  //this is "derived state, or "computer" state
+  const income = () => {
+    return list.filter((item) => +item.amount > 0).reduce((acc, b) => acc + +b.amount, 0);
+  };
+  const outcome = () => {
+    return list.filter((item) => +item.amount < 0).reduce((acc, b) => acc + +b.amount, 0);
+  };
+  const balance = () => {
+    return income() + outcome();
+  };
+
   return (
     <div>
       <h1 class='text-3xl pb-2'>Bank</h1>
+      <div>Income:{income()}</div>
+      <div>Income:{outcome()}</div>
+      <div>Income:{balance()}</div>
       <form
         onSubmit={(event) => addItem(event)}
         class='w-full max-w-sm shadow-md rounded px-8 pt-6 pb-8 mb-4'>
@@ -75,17 +89,18 @@ export default function Bank() {
       </form>
 
       <table class='w-full table-fixed max-w-sm shadow-sm rounded mb-4'>
-        <thead>
+        <thead class='grid-cols-1 divide-y divide-purple-700'>
           <tr>
             <th class='text-center'>Item</th>
             <th class='text-center'>Amount</th>
           </tr>
+          <tr></tr>
         </thead>
-        <tbody>
+        <tbody class='grid-cols-1 divide-y divide-purple-300'>
           {list.map((item, i) => (
             <tr key={i}>
-              <td class='col text-center'>{item.title}</td>
-              <td class='col text-center'> {item.amount}</td>
+              <td class='text-center'>{item.title}</td>
+              <td class='text-center'> {item.amount}</td>
             </tr>
           ))}
         </tbody>

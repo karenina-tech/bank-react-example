@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Card from './Card';
 
 export default function Bank() {
   const [item, setItem] = useState({ title: '', amount: null });
@@ -12,11 +13,18 @@ export default function Bank() {
 
   const addItem = (event) => {
     event.preventDefault();
-    handleAddClick();
+    handleDepositClick();
   };
 
-  const handleAddClick = () => {
+  const handleDepositClick = () => {
     setList((state) => [...state, { ...item }]);
+  };
+
+  const handleWithDrawClick = () => {
+    const negativeAmount = item.amount * -1;
+    const name = item.title;
+
+    setList((state) => [...state, { title: name, amount: negativeAmount }]);
   };
 
   //this is "derived state, or "computer" state
@@ -32,10 +40,13 @@ export default function Bank() {
 
   return (
     <div>
-      <h1 class='text-3xl pb-2'>Bank</h1>
-      <div>Income:{income()}</div>
-      <div>Income:{outcome()}</div>
-      <div>Income:{balance()}</div>
+      <h1 class='text-3xl pb-2 font-bold'>Bank</h1>
+      <div class='grid grid-cols-3 mb-2 w-full max-w-sm'>
+        <Card title='Income' number={income()}></Card>
+        <Card title='Outcome' number={outcome()}></Card>
+        <Card title='Balance' number={balance()}></Card>
+      </div>
+
       <form
         onSubmit={(event) => addItem(event)}
         class='w-full max-w-sm shadow-md rounded px-8 pt-6 pb-8 mb-4'>
@@ -75,14 +86,22 @@ export default function Bank() {
             />
           </div>
         </div>
-        <div class='md:flex md:items-center'>
+        <div class='md:flex'>
           <div class='md:w-1/3'></div>
-          <div class='md:w-2/3'>
+          <div class='md:w-1/3'>
             <button
-              onClick={handleAddClick}
-              class='bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded'
+              onClick={handleDepositClick}
+              class='bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mb-2'
               type='button'>
-              Add Entry
+              Deposit
+            </button>
+          </div>
+          <div class='md:w-1/3'>
+            <button
+              onClick={handleWithDrawClick}
+              class='md:text-rigth mb-1 md:mb-0 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-3 rounded'
+              type='button'>
+              Withdraw
             </button>
           </div>
         </div>

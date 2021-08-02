@@ -140,7 +140,7 @@ export default function Bank() {
       </table>
 
       <div class='md:flex '>
-        <p class=' md:text-center text-gray-500 text-xs'>&copy;2021 Karenina. All rights reserved.</p>
+        <p class=' md:text-center text-gray-500 text-xs'>&copy;2021 Karenina & CodeOp credits.</p>
       </div>
     </div>
   );

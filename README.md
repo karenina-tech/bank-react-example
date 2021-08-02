@@ -2,6 +2,8 @@
 
 Activity example learned in my Bootcamp journey when we started using React. Bank, is a component to track the number of incomings and outcomings of a bank account, tracked in a balance function. For this version, some features are added, upgraded, or changed as I explain below.
 
+![Bank Dashboard](./public/bank.png)
+
 # Upgraded features:
 
 - Bootstrap library changed to Tailwind CSS to create a new app styling.

@@ -1,12 +1,12 @@
 # bank-react-example
 
-Activity example learned in my bootcamp journey, when we started using React. Bank, is a component to track the amount of incomings and outcomings of a bank account. For this version, some features are added, upgraded or changed as I explain below.
+Activity example learned in my Bootcamp journey when we started using React. Bank, is a component to track the number of incomings and outcomings of a bank account, tracked in a balance function. For this version, some features are added, upgraded, or changed as I explain below.
 
 # Upgraded features:
 
--Bootstrap library changed to Tailwind CSS to create a new app styling.
--Responsive design.
--The Bank.js component has a WithDraw button that holds a handleWithDrawClick function in order to allows add negative numbers without writte negative sign directly in the input.
+- Bootstrap library changed to Tailwind CSS to create a new app styling.
+- Responsive design.
+- The Bank.js component has a WithDraw button that holds a handleWithDrawClick function in order to allows add negative numbers without writte negative sign directly in the input.
 
 # Getting Started with Create React App
 

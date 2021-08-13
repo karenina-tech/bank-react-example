@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/bank-react-example/static/css/main.c839c769.chunk.css",
-    "main.js": "/bank-react-example/static/js/main.e71b8fac.chunk.js",
-    "main.js.map": "/bank-react-example/static/js/main.e71b8fac.chunk.js.map",
+    "main.css": "/bank-react-example/static/css/main.00221947.chunk.css",
+    "main.js": "/bank-react-example/static/js/main.57c6486a.chunk.js",
+    "main.js.map": "/bank-react-example/static/js/main.57c6486a.chunk.js.map",
     "runtime-main.js": "/bank-react-example/static/js/runtime-main.eaf4ff75.js",
     "runtime-main.js.map": "/bank-react-example/static/js/runtime-main.eaf4ff75.js.map",
     "static/js/2.f9e45e52.chunk.js": "/bank-react-example/static/js/2.f9e45e52.chunk.js",
     "static/js/2.f9e45e52.chunk.js.map": "/bank-react-example/static/js/2.f9e45e52.chunk.js.map",
     "index.html": "/bank-react-example/index.html",
-    "static/css/main.c839c769.chunk.css.map": "/bank-react-example/static/css/main.c839c769.chunk.css.map",
+    "static/css/main.00221947.chunk.css.map": "/bank-react-example/static/css/main.00221947.chunk.css.map",
     "static/js/2.f9e45e52.chunk.js.LICENSE.txt": "/bank-react-example/static/js/2.f9e45e52.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.eaf4ff75.js",
     "static/js/2.f9e45e52.chunk.js",
-    "static/css/main.c839c769.chunk.css",
-    "static/js/main.e71b8fac.chunk.js"
+    "static/css/main.00221947.chunk.css",
+    "static/js/main.57c6486a.chunk.js"
   ]
 }

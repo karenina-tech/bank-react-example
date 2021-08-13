@@ -88,17 +88,17 @@ export default function Bank() {
             />
           </div>
         </div>
-        <div class='md:flex'>
+        <div class='flex'>
           <div class='md:w-1/3'></div>
           <div class='md:w-1/3'>
             <button
               onClick={handleDepositClick}
-              class='bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mb-2'
+              class='bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 mr-0.5 px-4 rounded mb-2'
               type='button'>
               Deposit
             </button>
           </div>
-          <div class='md:w-1/3'>
+          <div class='md:w-1/3 ml-4'>
             <button
               onClick={handleWithDrawClick}
               class='md:text-rigth mb-1 md:mb-0 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-3 rounded'
